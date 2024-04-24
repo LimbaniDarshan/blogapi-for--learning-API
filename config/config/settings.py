@@ -42,13 +42,18 @@ INSTALLED_APPS = [
     
     'rest_framework',
     'rest_framework.authtoken',
-    'allauth', # new
-    'allauth.account', # new
-    'allauth.socialaccount', # new
+    'allauth', 
+    'allauth.account', 
+    'allauth.socialaccount',
     'dj_rest_auth',
-    'dj_rest_auth.registration', # new
-    'posts',
+    'dj_rest_auth.registration', 
+    'drf_yasg',
+    'posts.apps.PostsConfig',
 ]
+
+SWAGGER_SETTINGS = {
+    'DEFAULT_AUTO_SCHEMA_CLASS': 'drf_yasg.inspectors.SwaggerAutoSchema',
+}
 
 REST_FRAMEWORK = {
     'DEFAULT_PERMISSION_CLASSES': [
